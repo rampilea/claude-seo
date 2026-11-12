@@ -54,7 +54,7 @@ in case a recipe needs a specific call.
 
 ## Overview
 
-Claude SEO is a Tier 4 SEO analysis skill with 26 sub-skills (22 core + 1 orchestrator +
+Claude SEO is a Tier 4 SEO analysis skill with 27 sub-skills (23 core + 1 orchestrator +
 1 framework integration + 2 extension mirrors), 19 sub-agents (16 core + 1 framework
 integration + 2 extension mirrors), and 63 Python execution scripts.
 
@@ -84,6 +84,7 @@ integration + 2 extension mirrors), and 63 Python execution scripts.
 | `/seo local <url>` | Local SEO analysis (GBP, citations, reviews) |
 | `/seo maps [cmd] [args]` | Maps intelligence (geo-grid, GBP audit, competitors) |
 | `/seo hreflang <url>` | Hreflang/i18n SEO audit, cultural profiles, content parity |
+| `/seo baidu <url>` | Baidu and mainland China search: ICP, reachability, Baiduspider, Chinese keywords |
 | `/seo google [cmd] [url]` | Google SEO APIs (GSC, PageSpeed, CrUX, Indexing, GA4) |
 | `/seo backlinks <url>` | Backlink profile analysis |
 | `/seo backlinks setup` | Setup free backlink APIs |
@@ -139,7 +140,7 @@ bash install.sh
 ## Architecture
 
 ```
-skills/                    # 26 sub-skills (auto-discovered)
+skills/                    # 27 sub-skills (auto-discovered)
   seo/SKILL.md            # Main orchestrator + routing
   seo-cluster/            # Semantic clustering (v1.9.0)
   seo-sxo/                # Search Experience Optimization (v1.9.0)
@@ -159,6 +160,7 @@ skills/                    # 26 sub-skills (auto-discovered)
   seo-maps/               # Maps intelligence
   seo-plan/               # Strategic planning
   seo-hreflang/           # International SEO
+  seo-baidu/              # Baidu and mainland China search
   seo-google/             # Google APIs
   seo-backlinks/          # Backlink analysis
   seo-programmatic/       # Programmatic SEO

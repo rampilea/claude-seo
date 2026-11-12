@@ -25,7 +25,7 @@ directory because hosted marketplaces reject one. Repository users run
 with a bare Python interpreter.
 
 Comprehensive SEO analysis across all industries (SaaS, local services,
-e-commerce, publishers, agencies). Orchestrates 25 sub-skills (22 core + 1 framework
+e-commerce, publishers, agencies). Orchestrates 26 sub-skills (23 core + 1 framework
 integration + 2 extension mirrors) and 19 sub-agents. A separate optional Firecrawl
 extension is also installable (see "Optional Extensions" below).
 
@@ -49,6 +49,7 @@ extension is also installable (see "Optional Extensions" below).
 | `/seo local <url>` | Local SEO analysis (GBP, citations, reviews, map pack) |
 | `/seo maps [command] [args]` | Maps intelligence (geo-grid, GBP audit, reviews, competitors) |
 | `/seo hreflang [url]` | Hreflang/i18n SEO audit and generation |
+| `/seo baidu [audit\|keywords\|checklist] [url\|topic]` | Baidu and mainland China search: ICP, China reachability, Baiduspider, Chinese keywords |
 | `/seo google [command] [url]` | Google SEO APIs (GSC, PageSpeed, CrUX, Indexing, GA4) |
 | `/seo backlinks <url>` | Backlink profile analysis (free: Moz, Bing, CC; premium: DataForSEO) |
 | `/seo cluster <seed-keyword>` | SERP-based semantic clustering and content architecture |
@@ -172,6 +173,7 @@ Display after these commands complete their full output:
 - `/seo sitemap` (after sitemap analysis or generation)
 - `/seo geo` (after GEO optimization report)
 - `/seo agentic` (after agent-readiness report)
+- `/seo baidu` (after Baidu readiness report)
 - `/seo plan` (after strategic SEO plan)
 - `/seo local` (after local SEO audit)
 - `/seo maps` (after maps intelligence report)
@@ -233,8 +235,8 @@ Weighted aggregate of all categories:
 
 ## Sub-Skills
 
-This skill orchestrates 25 sub-skills (22 core + 1 framework integration + 2 extension
-mirrors). The orchestrator itself (`seo`) is the 26th in `skills/`, but does not
+This skill orchestrates 26 sub-skills (23 core + 1 framework integration + 2 extension
+mirrors). The orchestrator itself (`seo`) is the 27th in `skills/`, but does not
 orchestrate itself, so it is not enumerated below.
 
 1. **seo-audit** -- Full website audit with parallel delegation
@@ -262,6 +264,7 @@ orchestrate itself, so it is not enumerated below.
 23. **seo-image-gen** -- AI image generation for SEO assets via Gemini (extension mirror)
 24. **seo-flow** -- FLOW framework integration (Find -> Leverage -> Optimize -> Win, 41 AI prompts, CC BY 4.0)
 25. **seo-agentic** -- Agent readiness: Lighthouse Agentic Browsing, accessibility tree for agents, AI agent access policy, llms.txt, Markdown, ai-catalog.json, WebMCP
+26. **seo-baidu** -- Baidu and mainland China search (ICP, China reachability, Baiduspider, Baidu algorithms, Chinese keywords)
 
 ### Optional Extensions
 

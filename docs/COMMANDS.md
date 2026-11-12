@@ -318,6 +318,28 @@ Hreflang and international SEO audit and generation. Subcommand: `audit <directo
 
 ---
 
+### `/seo baidu [audit|keywords|checklist] [url|topic]`
+
+Baidu and mainland China search audit. Subcommands: `audit <url>` (default), `keywords <topic>` (Chinese keyword research plan), `checklist` (launch checklist for a new China site).
+
+**Examples:**
+```
+/seo baidu https://example.cn
+/seo baidu keywords "project management software"
+/seo baidu checklist
+```
+
+**Capabilities:**
+- Check ICP and Public Security filing display and hosting location
+- Flag resources blocked or throttled in mainland China (Google Fonts, GA, reCAPTCHA, YouTube)
+- Compare the page served to a browser and to Baiduspider; measure the JavaScript rendering gap
+- Check Baidu-specific meta tags (applicable-device, no-transform, Content-Language)
+- Map content problems to Baidu's named quality algorithms
+- Scan copy for absolute claims banned by China's Advertising Law
+- Score a Baidu Readiness Score (0-100) with Search Resource Platform actions
+
+---
+
 ### `/seo programmatic [url|plan]`
 
 Programmatic SEO analysis and planning for pages generated at scale.
@@ -777,6 +799,7 @@ Multi-page Lighthouse audit via Unlighthouse (extension, MIT, no API quota). **P
 | `/seo drift baseline\|compare\|history <url>` | SEO drift monitoring |
 | `/seo ecommerce <url>` | E-commerce SEO |
 | `/seo hreflang [url]` | Hreflang and international SEO |
+| `/seo baidu [audit\|keywords\|checklist] [url\|topic]` | Baidu and mainland China search |
 | `/seo plan <type>` | Strategic planning by industry |
 | `/seo programmatic [url\|plan]` | Programmatic SEO analysis |
 | `/seo competitor-pages [url\|generate]` | Competitor comparison pages |

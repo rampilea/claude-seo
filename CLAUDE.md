@@ -4,7 +4,7 @@
 
 This repository contains **Claude SEO**, a Tier 4 Claude Code skill for comprehensive
 SEO analysis across all industries. It follows the Agent Skills open standard and the
-3-layer architecture (directive, orchestration, execution). 26 sub-skills (22 core +
+3-layer architecture (directive, orchestration, execution). 27 sub-skills (23 core +
 1 orchestrator + 1 framework integration + 2 extension mirrors), 19 sub-agents (16 core +
 1 framework integration + 2 extension mirrors), and an extensible reference
 system cover technical SEO, content quality,
@@ -24,7 +24,7 @@ claude-seo/
   .claude-plugin/
     plugin.json                    # Plugin manifest (v2.6.0)
     marketplace.json               # Marketplace catalog for distribution
-  skills/                            # 26 sub-skills (auto-discovered)
+  skills/                            # 27 sub-skills (auto-discovered)
     seo/                           # Main orchestrator skill
       SKILL.md                     # Entry point, routing table, core rules
       references/                  # On-demand knowledge files (13 files)
@@ -47,6 +47,9 @@ claude-seo/
     seo-programmatic/SKILL.md    # Programmatic SEO at scale
     seo-competitor-pages/SKILL.md # Competitor comparison pages
     seo-hreflang/SKILL.md       # International SEO / hreflang
+    seo-baidu/                   # Baidu and mainland China search
+      SKILL.md
+      references/                # Baidu technical reference, Chinese keyword research
     seo-google/                  # Google SEO APIs
       SKILL.md
       references/                # API reference files (11 files)
@@ -190,6 +193,7 @@ claude-seo/
 | `/seo drift baseline\|compare\|history <url>` | SEO drift monitoring |
 | `/seo ecommerce <url>` | E-commerce SEO |
 | `/seo hreflang [url]` | Hreflang and international SEO |
+| `/seo baidu [audit\|keywords\|checklist] [url\|topic]` | Baidu and mainland China search |
 | `/seo plan <type>` | Strategic planning by industry |
 | `/seo programmatic [url\|plan]` | Programmatic SEO analysis |
 | `/seo competitor-pages [url\|generate]` | Competitor comparison pages |
